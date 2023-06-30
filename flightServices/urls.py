@@ -13,5 +13,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('theflight/',include(router.urls)),
     path('api-token-auth/', obtain_auth_token ,name="api_token_auth"),
-    path('theflight/findflights/', views.find_flights)
+    path('theflight/findflights/', views.find_flights),
+    path('theflight/savereservation/', views.save_reservation)
 ]

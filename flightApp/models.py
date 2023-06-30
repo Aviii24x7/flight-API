@@ -28,7 +28,7 @@ class Passenger(models.Model):
         return self.firstName + ' ' + self.middleName + ' ' + self.lastName
     
 class Reservation(models.Model):
-    flight=models.OneToOneField(Flight, on_delete=models.CASCADE)
+    flight=models.ForeignKey(Flight, on_delete=models.CASCADE)
     passenger=models.OneToOneField(Passenger, on_delete=models.CASCADE)
 
 @receiver(post_save,sender=settings.AUTH_USER_MODEL)
